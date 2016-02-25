@@ -21,5 +21,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func gotologon(sender: AnyObject) {
+        
+        performSegueWithIdentifier("loadlogon", sender: nil)
+        
+    }
 }
 

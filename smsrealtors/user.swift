@@ -26,6 +26,7 @@ class user:NSObject, NSCoding {
         self.pass = pass
         self.email = emailx
     }
+    
     override init() {
         
     }
@@ -95,6 +96,7 @@ class user:NSObject, NSCoding {
         } catch (let err) {
             user_id = 0
         }
+        closedb()
         return user_id != 0
     }
 }

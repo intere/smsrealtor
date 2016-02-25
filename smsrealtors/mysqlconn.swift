@@ -25,3 +25,13 @@ catch (let err) {
     print(err)
 }
 }
+
+    func closedb() {
+        do{
+            try conn.close()
+        }
+        catch (let err) {
+            print(err)
+        }
+    }
+    

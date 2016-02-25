@@ -15,6 +15,7 @@
 		81072FBE1C7BE1D400E1DD70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81072FBC1C7BE1D400E1DD70 /* LaunchScreen.storyboard */; };
 		81550E671C7CB7120057A3B3 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81550E661C7CB7120057A3B3 /* user.swift */; };
 		8173F4BE1C7DFCA6008DE327 /* mysqlconn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */; };
+		8173F4C41C7E91A1008DE327 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173F4C31C7E91A1008DE327 /* loginVC.swift */; };
 		D3BC6C21C981461D6735F71E /* Pods_smsrealtors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F7D1FC1F633204459BC56B /* Pods_smsrealtors.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		81072FBF1C7BE1D400E1DD70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81550E661C7CB7120057A3B3 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mysqlconn.swift; sourceTree = "<group>"; };
+		8173F4C31C7E91A1008DE327 /* loginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +86,9 @@
 				81072FBC1C7BE1D400E1DD70 /* LaunchScreen.storyboard */,
 				81072FBA1C7BE1D400E1DD70 /* Assets.xcassets */,
 				81072FBF1C7BE1D400E1DD70 /* Info.plist */,
+				8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */,
 				81072FB71C7BE1D400E1DD70 /* smsrealtors.xcdatamodeld */,
 				81072FAE1C7BE1D400E1DD70 /* Products */,
-				8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */,
 			);
 			path = smsrealtors;
 			sourceTree = "<group>";
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				81072FB21C7BE1D400E1DD70 /* ViewController.swift */,
+				8173F4C31C7E91A1008DE327 /* loginVC.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				81072FB31C7BE1D400E1DD70 /* ViewController.swift in Sources */,
 				8173F4BE1C7DFCA6008DE327 /* mysqlconn.swift in Sources */,
 				81072FB91C7BE1D400E1DD70 /* smsrealtors.xcdatamodeld in Sources */,
+				8173F4C41C7E91A1008DE327 /* loginVC.swift in Sources */,
 				81072FB11C7BE1D400E1DD70 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
