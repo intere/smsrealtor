@@ -11,7 +11,7 @@ import MySqlSwiftNative
 
 class user:NSObject, NSCoding {
     
-    var user_id = 0
+    var user_id = 0  // if 0 user not login
     var firstname: String!
     var lastname: String!
     var email: String!
@@ -20,12 +20,11 @@ class user:NSObject, NSCoding {
     var notfiy: Int!
     var company, address, city, state, zip, website: String!
     
-    init(first: String, last: String, pass: String, emailx: String) {
-        firstname = first
-        lastname = last
-        self.pass = pass
+    init(pass: String, emailx: String) {
+         self.pass = pass
         self.email = emailx
     }
+    
     
     override init() {
         
@@ -76,20 +75,20 @@ class user:NSObject, NSCoding {
             let res = try user.query([self.email, self.pass])
             let rowscount = try res.readRow()?.count
             if (rowscount != nil) {
-                let row = try res.readRow()
-                self.user_id  = (row!["user_id"] as? Int)!
-                self.firstname = (row!["fname"] as? String)!
-                self.lastname = (row!["lname"] as? String)!
-                self.phone = (row!["phone"] as? String)!
-                self.cell = (row!["cell"] as? String)!
-                self.notfiy = (row!["notify"] as? Int)!
-                self.address = (row!["address"] as? String)!
-                self.city = (row!["city"] as? String)!
-                self.state = (row!["state"] as? String)!
-                self.zip = (row!["zip"] as? String)!
-                self.website = (row!["website"] as? String)!
-                self.company = (row!["company"] as? String)!
-
+                if  let row = try res.readRow() {
+                 self.user_id  = (row["user_id"] as? Int)!
+                self.firstname = (row["fname"] as? String)!
+                self.lastname = (row["lname"] as? String)!
+                self.phone = (row["phone"] as? String)!
+                self.cell = (row["cell"] as? String)!
+                self.notfiy = (row["notify"] as? Int)!
+                self.address = (row["address"] as? String)!
+                self.city = (row["city"] as? String)!
+                self.state = (row["state"] as? String)!
+                self.zip = (row["zip"] as? String)!
+                self.website = (row["website"] as? String)!
+                self.company = (row["company"] as? String)!
+                }
                 
             }
         

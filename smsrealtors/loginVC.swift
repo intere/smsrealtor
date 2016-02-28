@@ -10,6 +10,7 @@ import UIKit
 
 class loginVC: UIViewController {
     
+    var usr: user!
     
     @IBOutlet var logonLB: UILabel!
     
@@ -34,10 +35,28 @@ class loginVC: UIViewController {
     */
 
     @IBAction func logon_click(sender: AnyObject) {
-        
+        if emailTXT.text != nil && passwordTXT.text != nil {
+            usr = user(pass: passwordTXT.text!, emailx: emailTXT.text!)
+            if usr.logon() {
+              performSegueWithIdentifier("gohome", sender: usr)
+            }
+            
+            
+        }
         
     }
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "gohome" {
+            
+            if let homevc =  segue.destinationViewController as? ViewController {
+                homevc.userdata = sender as! user
+                
+            }
+            
+        }
+        
+    }
     
     
 }

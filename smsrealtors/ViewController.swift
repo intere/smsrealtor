@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var userdata: user!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +22,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    @IBAction func gotologon(sender: AnyObject) {
-        
-        performSegueWithIdentifier("loadlogon", sender: nil)
-        
+    @IBAction func loginclick(sender: AnyObject) {
+             performSegueWithIdentifier("loadlogon", sender: nil)
     }
+
 }
 
