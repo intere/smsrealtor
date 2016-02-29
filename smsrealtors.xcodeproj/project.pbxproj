@@ -19,6 +19,7 @@
 		818BDBFA1C80E8D40085A0BE /* My_members+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */; };
 		818BDBFB1C80E8D40085A0BE /* My_members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BDBF91C80E8D40085A0BE /* My_members.swift */; };
 		818BDBFD1C80EA8F0085A0BE /* members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BDBFC1C80EA8F0085A0BE /* members.swift */; };
+		8199307A1C848DF000BA2A34 /* membercell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819930791C848DF000BA2A34 /* membercell.swift */; };
 		D3BC6C21C981461D6735F71E /* Pods_smsrealtors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F7D1FC1F633204459BC56B /* Pods_smsrealtors.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "My_members+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		818BDBF91C80E8D40085A0BE /* My_members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_members.swift; sourceTree = "<group>"; };
 		818BDBFC1C80EA8F0085A0BE /* members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = members.swift; sourceTree = "<group>"; };
+		819930791C848DF000BA2A34 /* membercell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = membercell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		183A12B56E9A9AB205931F89 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				81072FB71C7BE1D400E1DD70 /* smsrealtors.xcdatamodeld */,
 				3FEBA4A14D4A639A6CD26723 /* Pods-smsrealtors.debug.xcconfig */,
 				1FB6CDAE1EC62C953FE0DA91 /* Pods-smsrealtors.release.xcconfig */,
 				BFBA83CF83E6F7DAA6D92AF1 /* Frameworks */,
@@ -93,7 +96,6 @@
 				81072FBA1C7BE1D400E1DD70 /* Assets.xcassets */,
 				81072FBF1C7BE1D400E1DD70 /* Info.plist */,
 				8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */,
-				81072FB71C7BE1D400E1DD70 /* smsrealtors.xcdatamodeld */,
 				81072FAE1C7BE1D400E1DD70 /* Products */,
 			);
 			path = smsrealtors;
@@ -102,6 +104,7 @@
 		81072FC51C7BE37B00E1DD70 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				819930791C848DF000BA2A34 /* membercell.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -109,7 +112,6 @@
 		81072FC61C7BE45400E1DD70 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				818BDBFC1C80EA8F0085A0BE /* members.swift */,
 				81072FB21C7BE1D400E1DD70 /* ViewController.swift */,
 				8173F4C31C7E91A1008DE327 /* loginVC.swift */,
 			);
@@ -119,9 +121,10 @@
 		81072FC71C7BE58100E1DD70 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */,
-				818BDBF91C80E8D40085A0BE /* My_members.swift */,
 				81550E661C7CB7120057A3B3 /* user.swift */,
+				818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */,
+				818BDBFC1C80EA8F0085A0BE /* members.swift */,
+				818BDBF91C80E8D40085A0BE /* My_members.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				818BDBFA1C80E8D40085A0BE /* My_members+CoreDataProperties.swift in Sources */,
 				81550E671C7CB7120057A3B3 /* user.swift in Sources */,
 				81072FB31C7BE1D400E1DD70 /* ViewController.swift in Sources */,
+				8199307A1C848DF000BA2A34 /* membercell.swift in Sources */,
 				818BDBFB1C80E8D40085A0BE /* My_members.swift in Sources */,
 				818BDBFD1C80EA8F0085A0BE /* members.swift in Sources */,
 				8173F4BE1C7DFCA6008DE327 /* mysqlconn.swift in Sources */,
@@ -427,7 +431,8 @@
 				81072FB81C7BE1D400E1DD70 /* smsrealtors.xcdatamodel */,
 			);
 			currentVersion = 81072FB81C7BE1D400E1DD70 /* smsrealtors.xcdatamodel */;
-			path = smsrealtors.xcdatamodeld;
+			name = smsrealtors.xcdatamodeld;
+			path = smsrealtors/smsrealtors.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

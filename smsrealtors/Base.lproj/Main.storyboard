@@ -94,7 +94,7 @@
                                 <rect key="frame" x="0.0" y="64" width="585" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="rBz-ML-uhJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="rBz-ML-uhJ" customClass="membercell" customModule="smsrealtors" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="585" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rBz-ML-uhJ" id="xIc-g6-nPZ">
@@ -128,6 +128,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="nl9-Dq-xp2" firstAttribute="leading" secondItem="F1v-NG-gh6" secondAttribute="trailing" constant="36" id="1DR-9B-THs"/>
+                                                <constraint firstItem="jRe-58-sCE" firstAttribute="leading" secondItem="xIc-g6-nPZ" secondAttribute="leadingMargin" constant="9" id="KDa-LE-pFY"/>
                                                 <constraint firstItem="F1v-NG-gh6" firstAttribute="leading" secondItem="jRe-58-sCE" secondAttribute="trailing" constant="8" id="Ovj-5i-7ci"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="nl9-Dq-xp2" secondAttribute="bottom" constant="6" id="QRM-ab-C3Q"/>
                                                 <constraint firstItem="jRe-58-sCE" firstAttribute="top" secondItem="xIc-g6-nPZ" secondAttribute="topMargin" id="UUK-l3-SUG"/>
@@ -141,6 +142,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="F1v-NG-gh6" secondAttribute="bottom" constant="10" id="zjm-Y5-Nw1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellLB" destination="F1v-NG-gh6" id="JHA-aR-ISB"/>
+                                            <outlet property="nameLB" destination="jRe-58-sCE" id="fNd-Sf-GXg"/>
+                                            <outlet property="optinLB" destination="nl9-Dq-xp2" id="fCf-9l-dec"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
