@@ -11,13 +11,13 @@ import MySqlSwiftNative
 
 class members {
     
-    var member_id: Int!
-    var user_id: Int!
+    var member_id: UInt!
+    var user_id: UInt!
     var name: String!
     var cell: String!
-    var opin: Int!
+    var opin: UInt!
     
-    init(member_id: Int, user_id: Int, name: String, cell: String, opin: Int) {
+    init(member_id: UInt, user_id: UInt, name: String, cell: String, opin: UInt) {
         self.member_id = member_id
         self.user_id = user_id
         self.name = name
@@ -33,8 +33,8 @@ class members {
             let res =  try select_stmt.query([member_id])
             let row = try res.readRow()
             
-            self.user_id = (row!["user_id"] as? Int)
-            self.opin = (row!["optin"] as? Int)
+            self.user_id = (row!["user_id"] as? UInt)
+            self.opin = (row!["optin"] as? UInt)
             self.name = (row!["name"] as? String)
             self.cell = (row!["cell"] as? String)
         

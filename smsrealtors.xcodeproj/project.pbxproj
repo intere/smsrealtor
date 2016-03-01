@@ -89,7 +89,6 @@
 			children = (
 				81072FC71C7BE58100E1DD70 /* models */,
 				81072FC61C7BE45400E1DD70 /* controllers */,
-				81072FB41C7BE1D400E1DD70 /* Main.storyboard */,
 				81072FC51C7BE37B00E1DD70 /* views */,
 				81072FB01C7BE1D400E1DD70 /* AppDelegate.swift */,
 				81072FBC1C7BE1D400E1DD70 /* LaunchScreen.storyboard */,
@@ -105,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				819930791C848DF000BA2A34 /* membercell.swift */,
+				81072FB41C7BE1D400E1DD70 /* Main.storyboard */,
 			);
 			name = views;
 			sourceTree = "<group>";

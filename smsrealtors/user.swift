@@ -1,8 +1,8 @@
-//
+ //
 //  user.swift
 //  smsrealtors
 //
-//  Created by Bill Banks on 2/23/16.
+//  Created by Bill Banks on 3/1/16.
 //  Copyright © 2016 Bill Banks. All rights reserved.
 //
 
@@ -11,14 +11,16 @@ import MySqlSwiftNative
 
 class user:NSObject, NSCoding {
     
-    var user_id = 0  // if 0 user not login
+    var user_id: UInt = 0  // if 0 user not login
     var firstname: String!
     var lastname: String!
     var email: String!
     var pass: String!
     var cell, phone: String!
-    var notfiy: Int!
+    var notfiy: UInt!
     var company, address, city, state, zip, website: String!
+    
+    
     
     init(pass: String, emailx: String) {
          self.pass = pass
@@ -34,10 +36,10 @@ class user:NSObject, NSCoding {
         self.init()
         self.firstname = (aDecoder.decodeObjectForKey("firstnane") as? String)!
         self.lastname = (aDecoder.decodeObjectForKey("lastnane") as? String)!
-         self.user_id = (aDecoder.decodeObjectForKey("user_id") as? Int)!
+         self.user_id = (aDecoder.decodeObjectForKey("user_id") as? UInt)!
          self.pass = (aDecoder.decodeObjectForKey("pass") as? String)!
          self.email = (aDecoder.decodeObjectForKey("email") as? String)!
-        self.notfiy = (aDecoder.decodeObjectForKey("notfiy") as? Int)!
+        self.notfiy = (aDecoder.decodeObjectForKey("notfiy") as? UInt)!
         self.phone = (aDecoder.decodeObjectForKey("phone") as? String)!
         self.cell = (aDecoder.decodeObjectForKey("cell") as? String)!
         self.address = (aDecoder.decodeObjectForKey("address") as? String)!
@@ -65,23 +67,28 @@ class user:NSObject, NSCoding {
         aCoder.encodeObject(self.company, forKey: "company")
     }
     
+    func islogon() -> Bool {
+       return self.user_id != 0
+    }
+    
     func logon() -> Bool {
         
         opendb()
         
         do{
-        let user = try conn.prepare("SELECT * FROM users WHERE email=? AND passwd=?")
+        let usersmt = try conn.prepare("SELECT * FROM users WHERE email=? AND passwd=?")
             
-            let res = try user.query([self.email, self.pass])
-            let rowscount = try res.readRow()?.count
-            if (rowscount != nil) {
+            let res = try usersmt.query([self.email, self.pass])
+           // let rowscount = try res.readRow()?.count
+            //if (rowscount != 0) {
                 if  let row = try res.readRow() {
-                 self.user_id  = (row["user_id"] as? Int)!
+                   print(row)
+                 self.user_id  = (row["user_id"] as? UInt)!
                 self.firstname = (row["fname"] as? String)!
                 self.lastname = (row["lname"] as? String)!
                 self.phone = (row["phone"] as? String)!
                 self.cell = (row["cell"] as? String)!
-                self.notfiy = (row["notify"] as? Int)!
+                self.notfiy = (row["notify"] as? UInt)!
                 self.address = (row["address"] as? String)!
                 self.city = (row["city"] as? String)!
                 self.state = (row["state"] as? String)!
@@ -90,10 +97,11 @@ class user:NSObject, NSCoding {
                 self.company = (row["company"] as? String)!
                 }
                 
-            }
+            //}
         
-        } catch (let err) {
+        } catch (let err as NSError) {
             user_id = 0
+            print(err.debugDescription)
         }
         closedb()
         return user_id != 0

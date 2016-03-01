@@ -35,16 +35,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             do {
                 let smt = try conn.prepare("SELECT * FROM members WHERE user_id=?")
                 let res = try smt.query([user_id])
-                             let rcount = try res.readAllRows()?.count
+               let rows = try res.readAllRows()
                 
-                for var i = 0; i < rcount; i++ {
+                for var i = 0; i < rows?.count; i++ {
                     
-                    
-                    let row = try res.readRow()
-                    let member_id = (row!["member_id"] as? Int)!
-                    let optin = (row!["optin"] as? Int)!
-                    let name = (row!["name"] as? String)!
-                    let cell = (row!["cell"] as? String)!
+                    let row = rows?[i]
+                  
+                    let member_id = (row["member_id"] as? UInt)!
+                    let optin = (row["optin"] as? UInt)!
+                    let name = (row["name"] as? String)!
+                    let cell = (row["cell"] as? String)!
                     
                     let addmember = members(member_id: member_id, user_id: user_id, name: name, cell: cell, opin: optin)
                     
