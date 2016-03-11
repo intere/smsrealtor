@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
+        userdata = user()
     
     
     }
@@ -35,11 +36,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             do {
                 let smt = try conn.prepare("SELECT * FROM members WHERE user_id=?")
                 let res = try smt.query([user_id])
-               let rows = try res.readAllRows()
-                
+               let res6 = try res.readAllRows()
+                let rows =  try res6?.first
                 for var i = 0; i < rows?.count; i++ {
                     
-                    let row = rows?[i]
+                    if let row = rows?[i] {
                   
                     let member_id = (row["member_id"] as? UInt)!
                     let optin = (row["optin"] as? UInt)!
@@ -49,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let addmember = members(member_id: member_id, user_id: user_id, name: name, cell: cell, opin: optin)
                     
                     memberlist.append(addmember)
-            
+                    }
                 }
                 
             } catch (let err as NSError) {
@@ -83,7 +84,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        loadmembers()
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,6 +98,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func loginclick(sender: AnyObject) {
              performSegueWithIdentifier("loadlogon", sender: nil)
     }
+    
+    func showerror(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "OK", style: .Default,  handler: nil )
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion:  nil)
+    }
+
 
 }
 

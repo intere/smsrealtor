@@ -17,7 +17,7 @@ class user:NSObject, NSCoding {
     var email: String!
     var pass: String!
     var cell, phone: String!
-    var notfiy: UInt!
+    var notfiy: Int!
     var company, address, city, state, zip, website: String!
     
     
@@ -39,14 +39,13 @@ class user:NSObject, NSCoding {
          self.user_id = (aDecoder.decodeObjectForKey("user_id") as? UInt)!
          self.pass = (aDecoder.decodeObjectForKey("pass") as? String)!
          self.email = (aDecoder.decodeObjectForKey("email") as? String)!
-        self.notfiy = (aDecoder.decodeObjectForKey("notfiy") as? UInt)!
+        self.notfiy = (aDecoder.decodeObjectForKey("notfiy") as? Int)!
         self.phone = (aDecoder.decodeObjectForKey("phone") as? String)!
         self.cell = (aDecoder.decodeObjectForKey("cell") as? String)!
         self.address = (aDecoder.decodeObjectForKey("address") as? String)!
         self.city = (aDecoder.decodeObjectForKey("city") as? String)!
         self.state = (aDecoder.decodeObjectForKey("state") as? String)!
         self.zip = (aDecoder.decodeObjectForKey("zip") as? String)!
-        self.website = (aDecoder.decodeObjectForKey("website") as? String)!
         self.company = (aDecoder.decodeObjectForKey("company") as? String)!
     }
     
@@ -88,7 +87,7 @@ class user:NSObject, NSCoding {
                 self.lastname = (row["lname"] as? String)!
                 self.phone = (row["phone"] as? String)!
                 self.cell = (row["cell"] as? String)!
-                self.notfiy = (row["notify"] as? UInt)!
+                self.notfiy = (row["notify"] as? Int)!
                 self.address = (row["address"] as? String)!
                 self.city = (row["city"] as? String)!
                 self.state = (row["state"] as? String)!
