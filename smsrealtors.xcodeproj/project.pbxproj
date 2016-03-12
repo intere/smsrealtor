@@ -60,8 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				81072FB71C7BE1D400E1DD70 /* smsrealtors.xcdatamodeld */,
-				3FEBA4A14D4A639A6CD26723 /* Pods-smsrealtors.debug.xcconfig */,
 				1FB6CDAE1EC62C953FE0DA91 /* Pods-smsrealtors.release.xcconfig */,
+				3FEBA4A14D4A639A6CD26723 /* Pods-smsrealtors.debug.xcconfig */,
 				BFBA83CF83E6F7DAA6D92AF1 /* Frameworks */,
 			);
 			name = Pods;
@@ -87,9 +87,9 @@
 		81072FAF1C7BE1D400E1DD70 /* smsrealtors */ = {
 			isa = PBXGroup;
 			children = (
+				81072FC51C7BE37B00E1DD70 /* views */,
 				81072FC71C7BE58100E1DD70 /* models */,
 				81072FC61C7BE45400E1DD70 /* controllers */,
-				81072FC51C7BE37B00E1DD70 /* views */,
 				81072FB01C7BE1D400E1DD70 /* AppDelegate.swift */,
 				81072FBC1C7BE1D400E1DD70 /* LaunchScreen.storyboard */,
 				81072FBA1C7BE1D400E1DD70 /* Assets.xcassets */,
@@ -122,9 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */,
-				818BDBFC1C80EA8F0085A0BE /* members.swift */,
-				81550E661C7CB7120057A3B3 /* user.swift */,
 				818BDBF91C80E8D40085A0BE /* My_members.swift */,
+				81550E661C7CB7120057A3B3 /* user.swift */,
+				818BDBFC1C80EA8F0085A0BE /* members.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";

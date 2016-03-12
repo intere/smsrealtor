@@ -36,32 +36,23 @@ class loginVC: UIViewController {
 
     @IBAction func logon_click(sender: AnyObject) {
         if emailTXT.text != nil && passwordTXT.text != nil {
-            usr = user(pass: passwordTXT.text!, emailx: emailTXT.text!)
-            if usr.logon() {
-              performSegueWithIdentifier("gohome", sender: usr)
+            userdata = user(pass: passwordTXT.text!, emailx: emailTXT.text!)
+            if userdata.logon() {
+              //performSegueWithIdentifier("gohome", sender: self.usr)
+              self.navigationController?.popViewControllerAnimated(true)
             }
             
             
         }
         
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "gohome" {
-            
-            if let homevc =  segue.destinationViewController as? ViewController {
-                homevc.userdata = sender as! user
-                
-            }
-            
-        }
-        
-    }
+    
     
     func showerror(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default,  handler: nil )
         alert.addAction(action)
-         presentViewController(alert, animated: true, completion:  nil)
+          presentViewController(alert, animated: true, completion:  nil)
     }
 }

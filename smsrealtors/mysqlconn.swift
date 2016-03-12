@@ -16,6 +16,7 @@ let MYSQLDB = "oursmsserver"
 
 let conn = MySQL.Connection()
 
+var userdata  = user()
 
 func opendb(){
 do{
