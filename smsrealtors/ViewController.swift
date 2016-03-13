@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MySqlSwiftNative
+//import MySqlSwiftNative
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -34,24 +34,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             memberlist.removeAll()
             opendb()
             do {
-                var table = MySQL.Table(tableName:"members", connection:conn)
+                let table = MySQL.Table(tableName:"members", connection:conn)
                 // select all rows from the table given a condition
-                 var rows = try table.select(Where: ["user_id=",user_id])
+                
+                let resultSets = try table.select(Where: ["user_id=",user_id])
+                let rows = resultSets![0]
+                
+                for row in rows {
                     
-                for var i = 0; i < rows!.count; i++ {
-                    
-                    var row = rows
-                  
-                    let member_id = (row["member_id"] as UInt)
+                    let member_id = (row["member_id"] as! UInt)
                     
                     let optin = row["optin"] as? UInt
                     let name = row["name"] as? String
                     let cell = (row["cell"] as? String)!
                     
-                    let addmember = members(member_id: member_id, user_id: user_id, name: name, cell: cell, opin: optin)
+                    let addmember = members(member_id: member_id, user_id: user_id, name: name!, cell: cell, opin: optin!)
                     
                     memberlist.append(addmember)
-                  //  }
+
                 }
                 
             }

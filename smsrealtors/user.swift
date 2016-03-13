@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MySqlSwiftNative
+//import MySqlSwiftNative
 
 class user:NSObject, NSCoding {
     

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MySqlSwiftNative
+//import MySqlSwiftNative
 
 let HOST = "sms.ourweb.net"
 let MYSQLUN = "root"
