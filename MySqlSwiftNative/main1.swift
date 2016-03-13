@@ -6,13 +6,6 @@
 //
 //
 
-#if os(Linux)
-import XCTest
-import Foundation
-    
-    XCTMain([MySQLDriverLinuxTests()])
-#endif
-
 /*
 print("Hello, World!")
 

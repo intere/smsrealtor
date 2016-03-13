@@ -44,11 +44,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                     let member_id = (row["member_id"] as! UInt)
                     
-                    let optin = row["optin"] as? UInt
-                    let name = row["name"] as? String
+                    let optin = (row["optin"] as? Int)!
+                    let name = (row["name"] as? String)!
                     let cell = (row["cell"] as? String)!
                     
-                    let addmember = members(member_id: member_id, user_id: user_id, name: name!, cell: cell, opin: optin!)
+                    let addmember = members(member_id: member_id, user_id: user_id, name: name, cell: cell, opin:optin)
                     
                     memberlist.append(addmember)
 

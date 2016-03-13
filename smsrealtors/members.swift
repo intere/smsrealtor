@@ -15,9 +15,9 @@ class members {
     var user_id: UInt!
     var name: String!
     var cell: String!
-    var opin: UInt!
+    var opin: Int!
     
-    init(member_id: UInt, user_id: UInt, name: String, cell: String, opin: UInt) {
+    init(member_id: UInt, user_id: UInt, name: String, cell: String, opin: Int) {
         self.member_id = member_id
         self.user_id = user_id
         self.name = name
@@ -34,7 +34,7 @@ class members {
             let row = try res.readRow()
             
             self.user_id = (row!["user_id"] as? UInt)
-            self.opin = (row!["optin"] as? UInt)
+            self.opin = (row!["optin"] as? Int)
             self.name = (row!["name"] as? String)
             self.cell = (row!["cell"] as? String)
         
