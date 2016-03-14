@@ -29,13 +29,13 @@ class membercell: UITableViewCell {
     }
     
     func ConfigureCell(mdata: members) {
-        nameLB.text = mdata.name
-        cellLB.text = mdata.cell
+        self.nameLB.text = mdata.name
+        self.cellLB.text = mdata.cell
         
         if mdata.opin == 1 {
-           optinLB.text = "Opt In"
+           self.optinLB.text = "Opt In"
         } else {
-            optinLB.text = ""
+            self.optinLB.text = " "
         }
         
         

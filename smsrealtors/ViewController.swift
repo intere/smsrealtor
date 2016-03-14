@@ -89,6 +89,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func viewDidAppear(animated: Bool) {
+        if let email = NSUserDefaults.standardUserDefaults().valueForKey("email") as? String {
+            if let pwd = NSUserDefaults.standardUserDefaults().valueForKey("pwd") as? String {
+                userdata.email = email
+                userdata.pass = pwd
+                if userdata.logon() {
+                    
+                }
+                
+            }
+        }
+        
         loadmembers()
     }
 

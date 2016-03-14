@@ -38,6 +38,9 @@ class loginVC: UIViewController {
         if emailTXT.text != nil && passwordTXT.text != nil {
             userdata = user(pass: passwordTXT.text!, emailx: emailTXT.text!)
             if userdata.logon() {
+                NSUserDefaults.standardUserDefaults().setValue("email", forKey: emailTXT.text!)
+                NSUserDefaults.standardUserDefaults().setValue("pwd", forKey: passwordTXT.text!)
+                NSUserDefaults.standardUserDefaults().synchronize()
               //performSegueWithIdentifier("gohome", sender: self.usr)
               self.navigationController?.popViewControllerAnimated(true)
             }
