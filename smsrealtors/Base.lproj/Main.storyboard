@@ -90,11 +90,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YG2-e6-KmP">
-                                <rect key="frame" x="0.0" y="64" width="585" height="516"/>
+                                <rect key="frame" x="49" y="89" width="585" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="membercell" selectionStyle="none" indentationWidth="10" id="rBz-ML-uhJ" customClass="membercell" customModule="smsrealtors" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="585" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="membercell" selectionStyle="none" indentationWidth="10" reuseIdentifier="membercell" id="rBz-ML-uhJ" customClass="membercell" customModule="smsrealtors" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="585" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rBz-ML-uhJ" id="xIc-g6-nPZ">
                                             <rect key="frame" x="0.0" y="0.0" width="585" height="43"/>
@@ -118,7 +118,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nl9-Dq-xp2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nl9-Dq-xp2">
                                                     <rect key="frame" x="434" y="8" width="102" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,17 +127,21 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="nl9-Dq-xp2" firstAttribute="leading" secondItem="F1v-NG-gh6" secondAttribute="trailing" constant="36" id="1DR-9B-THs"/>
+                                                <constraint firstItem="nl9-Dq-xp2" firstAttribute="top" secondItem="xIc-g6-nPZ" secondAttribute="topMargin" id="IGg-Q2-NbZ"/>
                                                 <constraint firstItem="jRe-58-sCE" firstAttribute="leading" secondItem="xIc-g6-nPZ" secondAttribute="leadingMargin" constant="9" id="KDa-LE-pFY"/>
                                                 <constraint firstItem="F1v-NG-gh6" firstAttribute="leading" secondItem="jRe-58-sCE" secondAttribute="trailing" constant="8" id="Ovj-5i-7ci"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="nl9-Dq-xp2" secondAttribute="bottom" constant="6" id="QRM-ab-C3Q"/>
                                                 <constraint firstItem="jRe-58-sCE" firstAttribute="top" secondItem="xIc-g6-nPZ" secondAttribute="topMargin" id="UUK-l3-SUG"/>
+                                                <constraint firstItem="nl9-Dq-xp2" firstAttribute="leading" secondItem="F1v-NG-gh6" secondAttribute="trailing" constant="36" id="Voj-sW-z4J"/>
                                                 <constraint firstItem="F1v-NG-gh6" firstAttribute="top" secondItem="xIc-g6-nPZ" secondAttribute="top" id="bY0-23-SeC"/>
                                                 <constraint firstItem="jRe-58-sCE" firstAttribute="leading" secondItem="xIc-g6-nPZ" secondAttribute="leadingMargin" constant="9" id="fsH-WI-Ntd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nl9-Dq-xp2" secondAttribute="bottom" constant="6" id="gze-Ui-Cv5"/>
                                                 <constraint firstItem="jRe-58-sCE" firstAttribute="top" secondItem="xIc-g6-nPZ" secondAttribute="topMargin" id="kWh-Iu-1tw"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jRe-58-sCE" secondAttribute="bottom" constant="6" id="mKX-vr-Ycm"/>
                                                 <constraint firstItem="nl9-Dq-xp2" firstAttribute="top" secondItem="xIc-g6-nPZ" secondAttribute="topMargin" id="oQm-0D-CAO"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jRe-58-sCE" secondAttribute="bottom" constant="6" id="orl-Hk-Mqk"/>
                                                 <constraint firstItem="jRe-58-sCE" firstAttribute="leading" secondItem="xIc-g6-nPZ" secondAttribute="leadingMargin" constant="9" id="w2i-RE-H60"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nl9-Dq-xp2" secondAttribute="trailing" constant="41" id="wpm-4v-rd5"/>
                                                 <constraint firstAttribute="bottom" secondItem="F1v-NG-gh6" secondAttribute="bottom" constant="10" id="zjm-Y5-Nw1"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -195,7 +199,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pEr-Vg-7Y6"/>
+        <segue reference="jbV-xh-3D1"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.3256359995" green="1" blue="0.81508232380000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

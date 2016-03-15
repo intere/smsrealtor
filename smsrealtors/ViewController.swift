@@ -81,10 +81,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return cell
         }  else {
           let  cell = membercell()
-          cell.ConfigureCell(memberlist[indexPath.row])
-            return cell
+         cell.ConfigureCell(memberlist[indexPath.row])
+          return cell
         }
-        
         
     }
     

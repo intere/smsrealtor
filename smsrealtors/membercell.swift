@@ -29,8 +29,13 @@ class membercell: UITableViewCell {
     }
     
     func ConfigureCell(mdata: members) {
-        self.nameLB.text = mdata.name
-        self.cellLB.text = mdata.cell
+        
+        if mdata.opin == 1 {
+            self.nameLB.text = "*\(mdata.name!)"
+        } else {
+            self.nameLB.text = mdata.name!
+        }
+        self.cellLB.text = mdata.cell!
         
         if mdata.opin == 1 {
            self.optinLB.text = "Opt In"
