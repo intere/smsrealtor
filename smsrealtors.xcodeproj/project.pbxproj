@@ -26,6 +26,8 @@
 		81072FB91C7BE1D400E1DD70 /* smsrealtors.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81072FB71C7BE1D400E1DD70 /* smsrealtors.xcdatamodeld */; };
 		81072FBB1C7BE1D400E1DD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81072FBA1C7BE1D400E1DD70 /* Assets.xcassets */; };
 		81072FBE1C7BE1D400E1DD70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81072FBC1C7BE1D400E1DD70 /* LaunchScreen.storyboard */; };
+		8108EE941C9AF59B007BA3D1 /* memberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8108EE931C9AF59B007BA3D1 /* memberVC.swift */; };
+		810F03191C99DE0300D6BD01 /* const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810F03181C99DE0300D6BD01 /* const.swift */; };
 		81550E671C7CB7120057A3B3 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81550E661C7CB7120057A3B3 /* user.swift */; };
 		8173F4BE1C7DFCA6008DE327 /* mysqlconn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */; };
 		8173F4C41C7E91A1008DE327 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173F4C31C7E91A1008DE327 /* loginVC.swift */; };
@@ -59,6 +61,8 @@
 		81072FBA1C7BE1D400E1DD70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81072FBD1C7BE1D400E1DD70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81072FBF1C7BE1D400E1DD70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8108EE931C9AF59B007BA3D1 /* memberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memberVC.swift; sourceTree = "<group>"; };
+		810F03181C99DE0300D6BD01 /* const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = const.swift; sourceTree = "<group>"; };
 		81550E661C7CB7120057A3B3 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mysqlconn.swift; sourceTree = "<group>"; };
 		8173F4C31C7E91A1008DE327 /* loginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
@@ -112,14 +116,15 @@
 				3BC37B3F1C948F5A00C0B9E7 /* tests.swift */,
 				3BC37B401C948F5A00C0B9E7 /* Utils.swift */,
 			);
-			path = MySqlSwiftNative;
+			name = MySqlSwiftNative;
+			path = ../MySqlSwiftNative;
 			sourceTree = "<group>";
 		};
 		81072FA41C7BE1D400E1DD70 = {
 			isa = PBXGroup;
 			children = (
+				810F03181C99DE0300D6BD01 /* const.swift */,
 				818B5CB61C949C65003A288F /* Podfile */,
-				3BC37B321C948F5A00C0B9E7 /* MySqlSwiftNative */,
 				81072FAF1C7BE1D400E1DD70 /* smsrealtors */,
 				183A12B56E9A9AB205931F89 /* Pods */,
 				B4D4B7CC7EF67E60A38207EF /* Frameworks */,
@@ -138,6 +143,7 @@
 		81072FAF1C7BE1D400E1DD70 /* smsrealtors */ = {
 			isa = PBXGroup;
 			children = (
+				3BC37B321C948F5A00C0B9E7 /* MySqlSwiftNative */,
 				81072FC51C7BE37B00E1DD70 /* views */,
 				81072FC71C7BE58100E1DD70 /* models */,
 				81072FC61C7BE45400E1DD70 /* controllers */,
@@ -165,6 +171,7 @@
 			children = (
 				81072FB21C7BE1D400E1DD70 /* ViewController.swift */,
 				8173F4C31C7E91A1008DE327 /* loginVC.swift */,
+				8108EE931C9AF59B007BA3D1 /* memberVC.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -321,6 +328,7 @@
 				3BC37B4B1C948F5A00C0B9E7 /* Statement.swift in Sources */,
 				3BC37B481C948F5A00C0B9E7 /* Result.swift in Sources */,
 				818BDBFA1C80E8D40085A0BE /* My_members+CoreDataProperties.swift in Sources */,
+				8108EE941C9AF59B007BA3D1 /* memberVC.swift in Sources */,
 				3BC37B411C948F5A00C0B9E7 /* Connection.swift in Sources */,
 				81550E671C7CB7120057A3B3 /* user.swift in Sources */,
 				3BC37B461C948F5A00C0B9E7 /* Packets.swift in Sources */,
@@ -339,6 +347,7 @@
 				3BC37B421C948F5A00C0B9E7 /* ConnectionPool.swift in Sources */,
 				8173F4C41C7E91A1008DE327 /* loginVC.swift in Sources */,
 				3BC37B471C948F5A00C0B9E7 /* Query.swift in Sources */,
+				810F03191C99DE0300D6BD01 /* const.swift in Sources */,
 				81072FB11C7BE1D400E1DD70 /* AppDelegate.swift in Sources */,
 				3BC37B4E1C948F5A00C0B9E7 /* Utils.swift in Sources */,
 			);

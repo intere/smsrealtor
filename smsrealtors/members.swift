@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+
 //import MySqlSwiftNative
 
 class members {
@@ -46,24 +48,17 @@ class members {
     }
     
     func save(usr: user) {
-        opendb()
-        
-        do {
-            if usr.user_id != 0 {
-                // user is loged in
-                if self.member_id == 0 {
-                    // insert
-                    let ins_smt = try conn.prepare("INSERT INTO members(name, cell, optin) VALUE (?,?,?)")
-                    try ins_smt.exec([self.name, self.cell, self.opin])
-                }
+        if let pwd = NSUserDefaults.standardUserDefaults().valueForKey("pwd") as? String {
+            if self.user_id != 0 {
+                let urlstr = "\(REF_ADDMEMBER_URL)user_id=\(self.user_id)&pwd=\(pwd)&name=\(self.name)&cell=\(self.cell)"
+//                let url = NSURL(string: urlstr)
+                Alamofire.request(.GET, urlstr)
+                
+                
+
+                
             }
-            
-        } catch (let err as NSError) {
-            print(err.debugDescription)
         }
-        
-        closedb()
-        
     }
     
 }

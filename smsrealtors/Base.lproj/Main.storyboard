@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YG2-e6-KmP">
-                                <rect key="frame" x="49" y="89" width="585" height="516"/>
+                                <rect key="frame" x="8" y="64" width="585" height="516"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="membercell" selectionStyle="none" indentationWidth="10" reuseIdentifier="membercell" id="rBz-ML-uhJ" customClass="membercell" customModule="smsrealtors" customModuleProvider="target">
@@ -156,16 +156,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZmE-h5-PXa">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="cxJ-9P-jto">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="31w-Pu-fgq">
+                    <navigationItem key="navigationItem" id="Uzo-vI-lbc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="2er-5B-ChB">
+                            <color key="tintColor" red="0.35757718649999998" green="0.74401443109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="usr-TG-u6e" kind="showDetail" id="uFk-z1-yVU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="lOo-Ua-2RE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zxw-ac-mBR">
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logon">
-                                    <color key="titleColor" red="0.35757718647495484" green="0.74401443107639786" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.35757718649999998" green="0.74401443109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TSz-Ql-44q"/>
+                                    <action selector="loginclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H4L-1h-2fa"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -178,6 +184,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1168" y="412"/>
+        </scene>
+        <!--MemberVC-->
+        <scene sceneID="UfB-r1-xar">
+            <objects>
+                <viewController id="usr-TG-u6e" customClass="memberVC" customModule="smsrealtors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1aj-Ou-pBP"/>
+                        <viewControllerLayoutGuide type="bottom" id="Buu-3y-oQ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SXe-9d-vKz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Conact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-bI-wKK">
+                                <rect key="frame" x="240" y="37" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pWk-l5-wfs">
+                                <rect key="frame" x="103" y="97" width="334" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="RoB-N3-ICZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cell" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U9n-ca-Njr">
+                                <rect key="frame" x="103" y="146" width="334" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="04h-sI-Jgj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YF-33-BFL">
+                                <rect key="frame" x="233" y="257" width="46" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="0.35757718649999998" green="0.74401443109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBUT:" destination="usr-TG-u6e" eventType="touchUpInside" id="HUI-Lu-2Vc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c9L-bI-wKK" firstAttribute="centerX" secondItem="SXe-9d-vKz" secondAttribute="centerX" id="2PX-vj-2Gg"/>
+                            <constraint firstItem="U9n-ca-Njr" firstAttribute="top" secondItem="pWk-l5-wfs" secondAttribute="bottom" constant="19" id="Lz6-wK-Hmr"/>
+                            <constraint firstItem="1YF-33-BFL" firstAttribute="top" secondItem="U9n-ca-Njr" secondAttribute="bottom" constant="81" id="MwF-t3-iAq"/>
+                            <constraint firstItem="pWk-l5-wfs" firstAttribute="top" secondItem="c9L-bI-wKK" secondAttribute="bottom" constant="39" id="UE0-1t-MI5"/>
+                            <constraint firstItem="1YF-33-BFL" firstAttribute="centerX" secondItem="SXe-9d-vKz" secondAttribute="centerX" id="dxV-SS-mwe"/>
+                            <constraint firstItem="c9L-bI-wKK" firstAttribute="top" secondItem="1aj-Ou-pBP" secondAttribute="bottom" constant="17" id="eVT-y4-05j"/>
+                            <constraint firstItem="U9n-ca-Njr" firstAttribute="centerX" secondItem="SXe-9d-vKz" secondAttribute="centerX" id="oej-fy-eUQ"/>
+                            <constraint firstItem="pWk-l5-wfs" firstAttribute="centerX" secondItem="SXe-9d-vKz" secondAttribute="centerX" id="tJe-wV-TkJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cellTXT" destination="U9n-ca-Njr" id="Xce-vN-SFH"/>
+                        <outlet property="nameTXT" destination="pWk-l5-wfs" id="1G9-ZG-bRb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvP-4T-YjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="497"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2fn-cM-BQg">
