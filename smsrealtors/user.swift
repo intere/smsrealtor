@@ -7,7 +7,8 @@
 //
 
 import Foundation
-//import MySqlSwiftNative
+import Alamofire
+
 
 class user:NSObject, NSCoding {
     
@@ -66,10 +67,10 @@ class user:NSObject, NSCoding {
         aCoder.encodeObject(self.company, forKey: "company")
     }
     
-    func islogon() -> Bool {
+    func islogon()     -> Bool {
        return self.user_id != 0
     }
-    
+
     func logon() -> Bool {
         
         opendb()
@@ -81,7 +82,7 @@ class user:NSObject, NSCoding {
            // let rowscount = try res.readRow()?.count
             //if (rowscount != 0) {
                 if  let row = try res.readRow() {
-                   print(row)
+//                   print(row)
                  self.user_id  = (row["user_id"] as? UInt)!
                 self.firstname = (row["fname"] as? String)!
                 self.lastname = (row["lname"] as? String)!
@@ -104,5 +105,26 @@ class user:NSObject, NSCoding {
         }
         closedb()
         return user_id != 0
+    }
+    
+    func save() -> Bool {
+        do {
+            
+            let usersmt = try conn.prepare("SELECT * FROM users WHERE email=?")
+            
+            let res = try usersmt.query([self.email])
+            
+            if  let _ = try res.readRow() {
+                return false
+            }
+        } catch {
+               let urlstr  = "\(REF_ADDUSER_URL)email=\(self.email)&pass=\(self.pass)&lname=\(self.firstname)&lname=\(self.lastname)&phone=\(self.phone)&cell=\(self.cell)&notify=\(self.notfiy)&address=\(self.address)&city=\(self.city)&state=\(self.state)&zip=\(self.zip)&website=\(self.website)&company=\(self.company)"
+            Alamofire.request(.GET, urlstr)
+            
+        
+        }
+        
+        
+        return logon()
     }
 }

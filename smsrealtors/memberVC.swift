@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import EVContactsPicker
 
-class memberVC: UIViewController {
+class memberVC: UIViewController, EVContactsPickerDelegate {
     
     @IBOutlet var nameTXT: UITextField!
     
@@ -42,6 +43,25 @@ class memberVC: UIViewController {
         
     }
     
+    @IBAction func contactsBUT(sender: AnyObject) {
+        
+        let contactpicker = EVContactsPickerViewController()
+         contactpicker.delegate = self
+        self.navigationController?.pushViewController(contactpicker, animated: true)
+    }
+    
+    func didChooseContacts(contacts: [EVContact]?) {
+        
+        if let cons = contacts {
+            
+            for con in cons {
+                let addmemer = members(member_id: 0, user_id: userdata.user_id, name: con.fullname(), cell: con.phone!, opin: 0)
+                addmemer.save(userdata)
+                
+            }
+        }
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     func showerror(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)

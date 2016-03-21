@@ -36,6 +36,7 @@
 		818BDBFB1C80E8D40085A0BE /* My_members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BDBF91C80E8D40085A0BE /* My_members.swift */; };
 		818BDBFD1C80EA8F0085A0BE /* members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BDBFC1C80EA8F0085A0BE /* members.swift */; };
 		8199307A1C848DF000BA2A34 /* membercell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819930791C848DF000BA2A34 /* membercell.swift */; };
+		81EEE8FD1C9DA7370002C2F7 /* registerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EEE8FC1C9DA7370002C2F7 /* registerVC.swift */; };
 		9F357B094326A4BF43B0F7A9 /* Pods_smsrealtors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10B08EAA7AB8DC444B50C00 /* Pods_smsrealtors.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -66,11 +67,12 @@
 		81550E661C7CB7120057A3B3 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mysqlconn.swift; sourceTree = "<group>"; };
 		8173F4C31C7E91A1008DE327 /* loginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
-		818B5CB61C949C65003A288F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = smsrealtors/Podfile; sourceTree = "<group>"; };
+		818B5CB61C949C65003A288F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "My_members+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		818BDBF91C80E8D40085A0BE /* My_members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_members.swift; sourceTree = "<group>"; };
 		818BDBFC1C80EA8F0085A0BE /* members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = members.swift; sourceTree = "<group>"; };
 		819930791C848DF000BA2A34 /* membercell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = membercell.swift; sourceTree = "<group>"; };
+		81EEE8FC1C9DA7370002C2F7 /* registerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerVC.swift; sourceTree = "<group>"; };
 		B10B08EAA7AB8DC444B50C00 /* Pods_smsrealtors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_smsrealtors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED6424AC97AB804D98C861A /* Pods-smsrealtors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smsrealtors.release.xcconfig"; path = "Pods/Target Support Files/Pods-smsrealtors/Pods-smsrealtors.release.xcconfig"; sourceTree = "<group>"; };
 		F6218B6C9976D8938CBA1E10 /* Pods-smsrealtors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smsrealtors.debug.xcconfig"; path = "Pods/Target Support Files/Pods-smsrealtors/Pods-smsrealtors.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				81072FB71C7BE1D400E1DD70 /* smsrealtors.xcdatamodeld */,
+				81072FAE1C7BE1D400E1DD70 /* Products */,
 				BFBA83CF83E6F7DAA6D92AF1 /* Frameworks */,
 				F6218B6C9976D8938CBA1E10 /* Pods-smsrealtors.debug.xcconfig */,
 				DED6424AC97AB804D98C861A /* Pods-smsrealtors.release.xcconfig */,
@@ -124,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				810F03181C99DE0300D6BD01 /* const.swift */,
-				818B5CB61C949C65003A288F /* Podfile */,
 				81072FAF1C7BE1D400E1DD70 /* smsrealtors */,
 				183A12B56E9A9AB205931F89 /* Pods */,
 				B4D4B7CC7EF67E60A38207EF /* Frameworks */,
@@ -137,7 +139,6 @@
 				81072FAD1C7BE1D400E1DD70 /* smsrealtors.app */,
 			);
 			name = Products;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		81072FAF1C7BE1D400E1DD70 /* smsrealtors */ = {
@@ -149,10 +150,9 @@
 				81072FC61C7BE45400E1DD70 /* controllers */,
 				81072FB01C7BE1D400E1DD70 /* AppDelegate.swift */,
 				81072FBC1C7BE1D400E1DD70 /* LaunchScreen.storyboard */,
-				81072FBA1C7BE1D400E1DD70 /* Assets.xcassets */,
 				81072FBF1C7BE1D400E1DD70 /* Info.plist */,
+				81072FBA1C7BE1D400E1DD70 /* Assets.xcassets */,
 				8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */,
-				81072FAE1C7BE1D400E1DD70 /* Products */,
 			);
 			path = smsrealtors;
 			sourceTree = "<group>";
@@ -160,8 +160,8 @@
 		81072FC51C7BE37B00E1DD70 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				819930791C848DF000BA2A34 /* membercell.swift */,
 				81072FB41C7BE1D400E1DD70 /* Main.storyboard */,
+				819930791C848DF000BA2A34 /* membercell.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -172,6 +172,7 @@
 				81072FB21C7BE1D400E1DD70 /* ViewController.swift */,
 				8173F4C31C7E91A1008DE327 /* loginVC.swift */,
 				8108EE931C9AF59B007BA3D1 /* memberVC.swift */,
+				81EEE8FC1C9DA7370002C2F7 /* registerVC.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -180,8 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */,
-				818BDBF91C80E8D40085A0BE /* My_members.swift */,
+				818B5CB61C949C65003A288F /* Podfile */,
 				81550E661C7CB7120057A3B3 /* user.swift */,
+				818BDBF91C80E8D40085A0BE /* My_members.swift */,
 				818BDBFC1C80EA8F0085A0BE /* members.swift */,
 			);
 			name = models;
@@ -336,6 +338,7 @@
 				8199307A1C848DF000BA2A34 /* membercell.swift in Sources */,
 				818BDBFB1C80E8D40085A0BE /* My_members.swift in Sources */,
 				818BDBFD1C80EA8F0085A0BE /* members.swift in Sources */,
+				81EEE8FD1C9DA7370002C2F7 /* registerVC.swift in Sources */,
 				3BC37B4C1C948F5A00C0B9E7 /* Table.swift in Sources */,
 				3BC37B431C948F5A00C0B9E7 /* Constants.swift in Sources */,
 				3BC37B451C948F5A00C0B9E7 /* mysql.swift in Sources */,
