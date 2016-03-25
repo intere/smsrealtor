@@ -34,6 +34,10 @@ class loginVC: UIViewController {
     }
     */
 
+    @IBAction func goBack(sender:AnyObject) {
+        navigationController?.popViewControllerAnimated(true)
+    }
+
     @IBAction func logon_click(sender: AnyObject) {
         if emailTXT.text != nil && passwordTXT.text != nil {
             userdata = user(pass: passwordTXT.text!, emailx: emailTXT.text!)

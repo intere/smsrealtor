@@ -18,14 +18,13 @@ class memberVC: UIViewController, EVContactsPickerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
         if  userdata.user_id == 0 {
             self.showerror("Login", message: "You must be logged in")
-            self.navigationController?.popViewControllerAnimated(true)
         }
     }
 
@@ -65,7 +64,9 @@ class memberVC: UIViewController, EVContactsPickerDelegate {
     
     func showerror(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default,  handler: nil )
+        let action = UIAlertAction(title: "OK", style: .Default,  handler: { _ in
+            self.navigationController?.popViewControllerAnimated(true)
+        })
         alert.addAction(action)
         presentViewController(alert, animated: true, completion:  nil)
     }

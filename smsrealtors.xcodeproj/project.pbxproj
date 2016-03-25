@@ -31,13 +31,12 @@
 		81550E671C7CB7120057A3B3 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81550E661C7CB7120057A3B3 /* user.swift */; };
 		8173F4BE1C7DFCA6008DE327 /* mysqlconn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */; };
 		8173F4C41C7E91A1008DE327 /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8173F4C31C7E91A1008DE327 /* loginVC.swift */; };
-		818B5CB71C949C65003A288F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 818B5CB61C949C65003A288F /* Podfile */; };
 		818BDBFA1C80E8D40085A0BE /* My_members+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */; };
 		818BDBFB1C80E8D40085A0BE /* My_members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BDBF91C80E8D40085A0BE /* My_members.swift */; };
 		818BDBFD1C80EA8F0085A0BE /* members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818BDBFC1C80EA8F0085A0BE /* members.swift */; };
 		8199307A1C848DF000BA2A34 /* membercell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819930791C848DF000BA2A34 /* membercell.swift */; };
 		81EEE8FD1C9DA7370002C2F7 /* registerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EEE8FC1C9DA7370002C2F7 /* registerVC.swift */; };
-		9F357B094326A4BF43B0F7A9 /* Pods_smsrealtors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10B08EAA7AB8DC444B50C00 /* Pods_smsrealtors.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9F357B094326A4BF43B0F7A9 /* Pods_smsrealtors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10B08EAA7AB8DC444B50C00 /* Pods_smsrealtors.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +66,6 @@
 		81550E661C7CB7120057A3B3 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		8173F4BD1C7DFCA6008DE327 /* mysqlconn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mysqlconn.swift; sourceTree = "<group>"; };
 		8173F4C31C7E91A1008DE327 /* loginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
-		818B5CB61C949C65003A288F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "My_members+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		818BDBF91C80E8D40085A0BE /* My_members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = My_members.swift; sourceTree = "<group>"; };
 		818BDBFC1C80EA8F0085A0BE /* members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = members.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				818BDBF81C80E8D40085A0BE /* My_members+CoreDataProperties.swift */,
-				818B5CB61C949C65003A288F /* Podfile */,
 				81550E661C7CB7120057A3B3 /* user.swift */,
 				818BDBF91C80E8D40085A0BE /* My_members.swift */,
 				818BDBFC1C80EA8F0085A0BE /* members.swift */,
@@ -267,7 +264,6 @@
 			files = (
 				81072FBE1C7BE1D400E1DD70 /* LaunchScreen.storyboard in Resources */,
 				81072FBB1C7BE1D400E1DD70 /* Assets.xcassets in Resources */,
-				818B5CB71C949C65003A288F /* Podfile in Resources */,
 				81072FB61C7BE1D400E1DD70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
